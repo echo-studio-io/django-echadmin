@@ -1,0 +1,6 @@
+用户中心：{{ request.user }}<br>
+{% if request.user.is_staff %}
+    <a href="{% url 'admin:index' %}">后台管理</a><br>
+{% endif %}
+
+<a href="{% url 'account:logout' %}">退出</a>
